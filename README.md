@@ -1,0 +1,1 @@
+A fake store for GA4 testing.
