@@ -10,7 +10,7 @@ const handleRemove = (product) => {
   removeFromCart(product.id);
 
   window.gtag("event", "remove_from_cart", {
-    currency: "USD",
+    currency: "EUR",
     value: product.price,
     items: [
       {
@@ -33,7 +33,7 @@ const handleRemove = (product) => {
           {cart.map((p, index) => (
               <li key={index}>
               {p.name} - €{p.price}{" "}
-              <button onClick={() => handleRemove(product)}>Remove</button>
+              <button onClick={() => handleRemove(p)}>Remove</button>
             </li>
           ))}
         </ul>
